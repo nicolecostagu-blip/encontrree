@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontre seu Pet - Ajude animais perdidos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>🐾 Encontre seu Pet 🐾</h1>
+        <h2>Somos um site com foco em ajudar pessoas a encontrar seus animais perdidos</h2>
+        <h3>Conectamos tutores de animais perdidos com pessoas que encontraram pets</h3>
+        <p>Cadastre seu animal perdido ou ajude a encontrar um pet desaparecido.</p>
+        <div class="animal-icons">
+            <span>🐶</span> <span>🐱</span> <span>🐰</span> <span>🐦</span> <span>🐹</span>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="card">
+            <h2 class="card-title">📝 Cadastro da Pessoa</h2>
+            <div class="paw-prints">🐾 🐾 🐾</div>
+            
+            <form action="https://formspree.io/f/mjknrdn" method="POST">
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Endereço</legend>
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" required>
+                    
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                    </select>
+                </fieldset>
+                
+                <button type="submit" class="btn-submit">Salvar Dados</button>
+            </form>
+        </div>
+        
+        <div class="card">
+            <h2 class="card-title">🐕 Cadastro do Animal</h2>
+            <div class="paw-prints">🐾 🐾 🐾</div>
+            
+            <form action="https://formspree.io/f/mjknrdn" method="POST">
+                <fieldset>
+                    <legend>Situação</legend>
+                    <div class="radio-group">
+                        <label><input type="radio" name="situacao" value="perdi" required> Perdi meu pet</label>
+                        <label><input type="radio" name="situacao" value="encontrei" required> Encontrei um pet</label>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Informações</legend>
+                    <label for="tipo-animal">Tipo:</label>
+                    <select id="tipo-animal" name="tipo_animal" required>
+                        <option value="" disabled selected>Selecione...</option>
+                        <option value="cachorro">🐶 Cachorro</option>
+                        <option value="gato">🐱 Gato</option>
+                        <option value="outro">❓ Outro</option>
+                    </select>
+                    
+                    <label for="cor">Cor:</label>
+                    <input type="text" id="cor" name="cor" placeholder="Cor do animal" required>
+                    
+                    <label for="local">Local:</label>
+                    <input type="text" id="local" name="local" placeholder="Onde viu o animal" required>
+                    
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data" required>
+                </fieldset>
+                
+                <button type="submit" class="btn-submit">Cadastrar Animal</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <p>❤ Projeto para ajudar animais perdidos ❤</p>
+        <p>© 2024 Encontre seu Pet</p>
+        <div>🐶 🐱 🐰</div>
+    </footer>
+</body>
+</html>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #ffccd5;
+    padding: 20px;
+    color: #333;
+}
+
+header {
+    background: #ff85a2;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    color: #ff3366;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 2px solid #ffccdd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    color: #ff3366;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ffccdd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.btn-submit {
+    background: #ff3366;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background: #ff1a55;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #888;
+}
+
+.animal-icons {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.paw-prints {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #ff85a2;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio-group input {
+    width: auto;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 100%;
+    }
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Realizado</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        .success {text-align: center; padding: 50px 20px;}
+        .success h1 {color: #ff3366; margin: 20px 0;}
+        .success p {font-size: 1.2rem; margin-bottom: 30px;}
+        .btn {display: inline-block; background: #ff3366; color: white; 
+              padding: 15px 30px; text-decoration: none; border-radius: 50px;
+              margin: 10px;}
+    </style>
+</head>
+<body>
+    <div class="success">
+        <h1>✅ Cadastro Realizado com Sucesso!</h1>
+        <p>Seu cadastro foi recebido. Entraremos em contato em breve.</p>
+        <p>Obrigado por ajudar os animais! 🐾</p>
+        <a href="index.html" class="btn">Voltar para Home</a>
+    </div>
+</body>
+</html>
+
+
+
